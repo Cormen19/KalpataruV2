@@ -28,5 +28,6 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Auth::routes();
+Route::resource('inicio', InicioController::class);
 
 Route::get('/home', [App\Http\Controllers\InicioController::class, 'index'])->name('home');

@@ -1,11 +1,13 @@
 @extends('layout.masterpage')
-
+@section('estilos')
+<link rel="stylesheet" href="{{URL::asset('css/register.css') }}">
+@endsection
 @section('contenido')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registro') }}</div>
+                <p class="registerTitulo">REGISTRO</p>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

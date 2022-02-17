@@ -1,11 +1,13 @@
 @extends('layout.masterpage')
-
+@section('estilos')
+<link rel="stylesheet" href="{{URL::asset('css/login.css') }}">
+@endsection
 @section('contenido')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <p class="loginTitulo">LOGIN</p>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -57,11 +59,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Has olvidado mi contraseña?') }}
-                                    </a>
-                                @endif
+                                
                             </div>
                         </div>
                     </form>
