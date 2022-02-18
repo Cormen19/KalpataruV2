@@ -1,0 +1,15 @@
+body {
+  background-color: #001D3F;
+}
+
+div.card-body {
+  margin-left: 2%;
+}
+
+div.card {
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 95%;
+  height: 150px;
+}
+/*# sourceMappingURL=mensajes.css.map */

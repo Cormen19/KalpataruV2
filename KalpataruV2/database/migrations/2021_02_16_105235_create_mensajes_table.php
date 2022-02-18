@@ -22,7 +22,7 @@ class CreateMensajesTable extends Migration
             $table->unsignedbigInteger('formahoja');
             $table->string('hexadecimalColorHoja');
             $table->unsignedbigInteger('idUsuario');
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
+            $table->foreign('idUsuario')->references('id')->on('users');
             $table->unsignedbigInteger('idClase');
             $table->foreign('idClase')->references('id')->on('clases');
             $table->unsignedbigInteger('idEstado');

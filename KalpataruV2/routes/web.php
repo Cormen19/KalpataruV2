@@ -5,6 +5,7 @@ use App\Http\Controllers\InicioController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\MensajesController;
 
 
 /*
@@ -29,5 +30,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 Route::resource('inicio', InicioController::class);
+Route::resource('mensajes', MensajesController::class);
 
 Route::get('/home', [App\Http\Controllers\InicioController::class, 'index'])->name('home');

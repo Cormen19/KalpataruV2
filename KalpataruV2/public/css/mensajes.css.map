@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,IAAI,CAAA;EACA,gBAAgB,EAFJ,OAAO;CAGtB;;AACD,AAAA,GAAG,AAAA,UAAU,CAAA;EACT,WAAW,EAAE,EAAE;CAClB;;AACD,AAAA,GAAG,AAAA,KAAK,CAAA;EACJ,WAAW,EAAE,EAAE;EACf,UAAU,EAAE,EAAE;EACd,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,KAAK;CAEhB",
+    "sources": [
+        "../sass/mensajes.scss"
+    ],
+    "names": [],
+    "file": "mensajes.css"
+}
