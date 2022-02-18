@@ -21,12 +21,12 @@ class CreateMensajesTable extends Migration
             $table->unsignedbigInteger('meGustas');
             $table->unsignedbigInteger('formahoja');
             $table->string('hexadecimalColorHoja');
-            $table->unsignedbigInteger('idUsuario');
-            $table->foreign('idUsuario')->references('id')->on('users');
-            $table->unsignedbigInteger('idClase');
-            $table->foreign('idClase')->references('id')->on('clases');
-            $table->unsignedbigInteger('idEstado');
-            $table->foreign('idEstado')->references('id')->on('mensajeestados');
+            $table->unsignedbigInteger('usuario_id');
+            $table->foreign('usuario_id')->references('id')->on('users');
+            $table->unsignedbigInteger('clase_id');
+            $table->foreign('clase_id')->references('id')->on('clases');
+            $table->unsignedbigInteger('estado_id');
+            $table->foreign('estado_id')->references('id')->on('mensajeestados');
             $table->unsignedbigInteger('anonimo');
             $table->string('tokenActivacion');
             $table->string('tokenEliminar');
