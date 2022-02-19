@@ -15,12 +15,12 @@ class CreateClasesTable extends Migration
     {
         Schema::create('clases', function (Blueprint $table) {
             $table->id();
-            $table->unsignedbigInteger('idCurso');
-            $table->unsignedbigInteger('idNivel');
-            $table->unsignedbigInteger('idGrado');
-            $table->foreign('idCurso')->references('id')->on('cursos');
-            $table->foreign('idNivel')->references('id')->on('niveles');
-            $table->foreign('idGrado')->references('id')->on('grados');
+            $table->unsignedbigInteger('curso_id');
+            $table->unsignedbigInteger('grado_id');
+            $table->foreign('curso_id')->references('id')->on('cursos');
+            $table->foreign('grado_id')->references('id')->on('grados');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at');
         });
 
     }

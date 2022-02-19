@@ -15,10 +15,10 @@ class CreateMegustaTable extends Migration
     {
         Schema::create('megusta', function (Blueprint $table) {
             $table->id();
-            $table->unsignedbigInteger('idUsuario');
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
-            $table->unsignedbigInteger('idMensaje');
-            $table->foreign('idMensaje')->references('id')->on('mensajes');
+            $table->unsignedbigInteger('usuario_id');
+            $table->foreign('usuario_id')->references('id')->on('users');
+            $table->unsignedbigInteger('mensaje_id');
+            $table->foreign('mensaje_id')->references('id')->on('mensajes');
         });
     }
 

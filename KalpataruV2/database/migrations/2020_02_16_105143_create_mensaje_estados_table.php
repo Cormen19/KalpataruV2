@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsuariorolesTable extends Migration
+class CreateMensajeestadosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateUsuariorolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuarioroles', function (Blueprint $table) {
+        Schema::create('mensaje_estados', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at');
         });
     }
 
@@ -26,6 +28,6 @@ class CreateUsuariorolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuarioroles');
+        Schema::dropIfExists('mensajeestados');
     }
 }

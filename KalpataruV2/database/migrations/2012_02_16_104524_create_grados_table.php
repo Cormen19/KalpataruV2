@@ -17,6 +17,8 @@ class CreateGradosTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('abreviacion');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at');
         });
     }
 

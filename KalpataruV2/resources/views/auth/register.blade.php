@@ -63,11 +63,16 @@
                             </div>
                         </div>
 
-						<div class="form-group row">
-                            
+						<div class="form-group row"></div>
+                            {{-- <label for="">Curso</label>
+                            <select name="grados_id" id="inputGrados_id" class="form-control" >
+                                @foreach ($grados as $grado)
+                                    <option value="">{{$grado->nombre}}</option>
+                                @endforeach
 
+                            </select> --}}
                            
-
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

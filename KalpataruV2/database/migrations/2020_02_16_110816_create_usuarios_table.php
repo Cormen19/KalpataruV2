@@ -21,12 +21,12 @@ class CreateUsuariosTable extends Migration
             $table->string('email');
             $table->string('contrasenia');
             $table->date('fecha_nacimiento');
-            $table->unsignedbigInteger('idClase');
-            $table->foreign('idClase')->references('id')->on('clases');
-            $table->unsignedbigInteger('idEstado');
-            $table->foreign('idEstado')->references('id')->on('usuarioestados');
-            $table->unsignedbigInteger('idRol');
-            $table->foreign('idRol')->references('id')->on('usuarioroles');
+            $table->unsignedbigInteger('clase_id');
+            $table->foreign('clase_id')->references('id')->on('clases');
+            $table->unsignedbigInteger('estado_id');
+            $table->foreign('estado_id')->references('id')->on('usuario_estados');
+            $table->unsignedbigInteger('rol_id');
+            $table->foreign('rol_id')->references('id')->on('usuario_rols');
             $table->unsignedbigInteger('penalizaciones');
             $table->string('tokenActivacion');
             $table->string('tokenRecordarpass');

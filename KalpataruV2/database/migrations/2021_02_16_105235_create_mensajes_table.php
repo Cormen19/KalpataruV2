@@ -17,19 +17,16 @@ class CreateMensajesTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('texto');
-            $table->date('fecha_creacion');
-            $table->unsignedbigInteger('meGustas');
-            $table->unsignedbigInteger('formahoja');
-            $table->string('hexadecimalColorHoja');
+            
             $table->unsignedbigInteger('usuario_id');
             $table->foreign('usuario_id')->references('id')->on('users');
-            $table->unsignedbigInteger('clase_id');
+            $table->unsignedbigInteger('clase_id')->nullable();
             $table->foreign('clase_id')->references('id')->on('clases');
-            $table->unsignedbigInteger('estado_id');
-            $table->foreign('estado_id')->references('id')->on('mensajeestados');
-            $table->unsignedbigInteger('anonimo');
-            $table->string('tokenActivacion');
-            $table->string('tokenEliminar');
+            $table->unsignedbigInteger('estado_id')->nullable();
+            $table->foreign('estado_id')->references('id')->on('mensaje_estados');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at');
+            
 
         });
     }
