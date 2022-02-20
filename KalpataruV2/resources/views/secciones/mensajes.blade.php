@@ -1,6 +1,7 @@
 @extends('layout.masterpage')
 @section('Titulo','Mensajes')
 @section('contenido')
+
 @section('estilos')
 <link rel="stylesheet" href="{{URL::asset('css/mensajes.css') }}">
 @endsection
@@ -19,7 +20,7 @@
 @endforeach
 <div class="botonAñadir">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Añadir
+    <i class="fa-solid fa-plus"></i>
   </button>
   </div>
 <!-- Modal -->

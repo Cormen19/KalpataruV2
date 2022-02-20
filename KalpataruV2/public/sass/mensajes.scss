@@ -10,12 +10,33 @@ div.card{
     margin-top: 2%;
     width: 95%;
     height: 150px;
-
+    animation-duration: 3s;
+    animation-name: animacion1;
+    margin-bottom: 2%;
 }
 .botonAñadir{
     margin-right: 3%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+@keyframes animacion1 {
+    from {
+      margin-top: 100%;
+      
+    }
+  
+    to {
+      margin-top: 2%;
+      
+    }
+  }
+.card-title{
+    font-size: 1.5em;
+}
+.card-text{
+    font-size: 1.5em;
 }
 

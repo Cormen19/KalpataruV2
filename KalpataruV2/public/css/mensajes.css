@@ -12,6 +12,11 @@ div.card {
   margin-top: 2%;
   width: 95%;
   height: 150px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: animacion1;
+          animation-name: animacion1;
+  margin-bottom: 2%;
 }
 
 .botonAñadir {
@@ -25,5 +30,33 @@ div.card {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+@-webkit-keyframes animacion1 {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 2%;
+  }
+}
+
+@keyframes animacion1 {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 2%;
+  }
+}
+
+.card-title {
+  font-size: 1.5em;
+}
+
+.card-text {
+  font-size: 1.5em;
 }
 /*# sourceMappingURL=mensajes.css.map */
