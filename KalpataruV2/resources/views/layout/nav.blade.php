@@ -9,7 +9,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul style="margin-left:68%;" class="navbar-nav mr-auto">
+      <ul style="margin-left:60%;" class="navbar-nav mr-auto">
         <li class="nav-item active">
             <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('inicio.index')}}">Inicio</a>
         </li>
@@ -32,7 +32,16 @@
         <li class="nav-item">
           <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('mensajes.index')}}">Mensajes</a>
         </li>
-      @endif
+        @if(Auth::user()->role_id=="2")
+        <li class="nav-item">
+          
+          <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('voyager.dashboard')}}">Administrador</a>
+          </li>
+          @endif
+      
+      
+        @endif
+      
 
     </ul>
 

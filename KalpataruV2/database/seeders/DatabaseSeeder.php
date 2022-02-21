@@ -53,6 +53,15 @@ class DatabaseSeeder extends Seeder
             'remember_token' => Str::random(10),
             
         ]);
+        \App\Models\User::factory()->create([
+            'role_id'=>'1',
+            'name'=>'Cormen',
+            'email'=>'cormen@gmail.com',
+            'email_verified_at'=>now(),
+            'password'=>Hash::make('zzzzzzzz'),
+            'remember_token' => Str::random(10),
+            
+        ]);
         \App\Models\Mensaje::factory()->create([
             'titulo'=>'Mensaje1',
             'texto'=>'Este es el primer mensaje',
