@@ -1,8 +1,4 @@
 @charset "UTF-8";
-body {
-  background-color: #001D3F;
-}
-
 div.card-body {
   margin-left: 2%;
 }
@@ -32,6 +28,7 @@ div.card {
           align-items: flex-end;
   margin-top: 2%;
   margin-bottom: 2%;
+  position: relative;
 }
 
 @-webkit-keyframes animacion1 {
@@ -67,5 +64,11 @@ div.card {
   position: absolute;
   margin-top: 1%;
   margin-left: 2%;
+}
+
+#arbolesColores {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*# sourceMappingURL=mensajes.css.map */

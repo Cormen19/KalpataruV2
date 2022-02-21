@@ -1,16 +1,27 @@
 @extends('layout.masterpage')
 @section('Titulo','Mensajes')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+<script type="text/js" src="{{URL::asset('js/arboles.js') }}"></script>
+
 @section('contenido')
+
 
 @section('estilos')
 <link rel="stylesheet" href="{{URL::asset('css/mensajes.css') }}">
+<link rel="stylesheet" href="{{URL::asset('css/show_mensajes.css') }}">
+<link rel="stylesheet" href="{{URL::asset('css/granim.css') }}">
+
+<canvas id="arbolesColores"></canvas>
 @endsection
+
+
 <p class="titulo">Mensajes</p>
 <div class="botonAñadir">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
     <i class="fa-solid fa-plus"></i>
   </button>
   </div>
+  <div id="mensajes">
 @foreach($mensajes as $mensaje)
 
 <div class="card">
@@ -25,6 +36,7 @@
 
 
 @endforeach
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -60,4 +72,30 @@
   </div>
 </form>
 </div>
+<script>
+var granimInstance = new Granim({
+    element: '#arbolesColores',
+    direction: 'top-bottom',
+    isPausedWhenNotInView: true,
+
+    states : {
+        "default-state": {
+            gradients: [
+                ['#29323c', '#485563'],
+                ['#FF6B6B', '#556270'],
+                ['#80d3fe', '#7ea0c4'],
+                ['#f0ab51', '#eceba3']
+            ],
+            transitionSpeed: 7000
+        }
+    }
+});
+
+ $(document).ready(function(){
+    var height=$("#mensajes").height();
+     $('#arbolesColores').height(height);
+});
+</script>
 @endsection
+
+

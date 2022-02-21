@@ -1,7 +1,5 @@
 $colorFondoBody:#001D3F;
-body{
-    background-color:$colorFondoBody;
-}
+
 div.card-body{
     margin-left: 2%;
 }
@@ -21,6 +19,7 @@ div.card{
     align-items: flex-end;
     margin-top: 2%;
     margin-bottom: 2%;
+    position: relative;
 }
 @keyframes animacion1 {
     from {
@@ -46,5 +45,8 @@ div.card{
     position: absolute;
     margin-top: 1%;
     margin-left: 2%;
+}
+#arbolesColores{
+    flex: 1;
 }
 
