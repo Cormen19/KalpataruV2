@@ -93,7 +93,7 @@ var granimInstance = new Granim({
 
  $(document).ready(function(){
     var height=$("#mensajes").height();
-     $('#arbolesColores').height(height);
+    $('#arbolesColores').height(height);
 });
 </script>
 @endsection
