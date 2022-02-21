@@ -59,4 +59,13 @@ div.card {
 .card-text {
   font-size: 1.5em;
 }
+
+.titulo {
+  font-size: 2em;
+  color: white;
+  width: 14%;
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 2%;
+}
 /*# sourceMappingURL=mensajes.css.map */
