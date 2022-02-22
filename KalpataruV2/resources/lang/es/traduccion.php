@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'Recuerdame'=>'Recuerdame',
     'Inicio'=>'Inicio',
     'Nosotras' => 'Nosotras',
     'Deseos' => 'Deseos',
