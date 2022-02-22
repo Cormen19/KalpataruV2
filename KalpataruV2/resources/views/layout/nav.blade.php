@@ -9,17 +9,17 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul style="margin-left:60%;" class="navbar-nav mr-auto">
+      <ul style="margin-left:55%;" class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('inicio.index')}}">Inicio</a>
+            <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('inicio.index')}}">{!! trans('traduccion.Inicio') !!}</a>
         </li>
 
         @if(!Auth::check())
       <li class="nav-item">
-        <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('login')}}">Login</a>
+        <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('login')}}">{!! trans('traduccion.Iniciar Sesion') !!}</a>
       </li>
       <li class="nav-item">
-        <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('register')}}">Registrarse</a>
+        <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('register')}}">{!! trans('traduccion.Registrarse') !!}</a>
       </li>
       @else
         <li class="nav-item">
@@ -34,14 +34,36 @@
         </li>
         @if(Auth::user()->role_id=="2")
         <li class="nav-item">
-          
+
           <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('voyager.dashboard')}}">Administrador</a>
           </li>
           @endif
-      
-      
+
+
         @endif
-      
+        <li class="nav-item">
+            @if (config('locale.status') && count(config('locale.languages')) > 0)
+                    @foreach (array_keys(config('locale.languages')) as $lang)
+                        @if ($lang != App::getLocale())
+                        <a style="color:white; font-family:Poppins; font-weight:bold; padding-right:0%" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{!! route('lang.swap', $lang) !!}">
+                                    {!! $lang !!}/
+                            </a>
+            </li>
+                        @endif
+                    @endforeach
+            @endif
+            <li class="nav-item">
+            @if (config('locale.status') && count(config('locale.languages')) > 0)
+                    @foreach (array_keys(config('locale.languages')) as $lang)
+                        @if ($lang == App::getLocale())
+                        <a style="color:white; font-family:Poppins; font-weight:bold; padding-left:0%" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{!! route('lang.swap', $lang) !!}">
+                                    <strong>{!! $lang !!}</strong>
+                            </a>
+                        @endif
+                    @endforeach
+            @endif
+            </li>
+
 
     </ul>
 

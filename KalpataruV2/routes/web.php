@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\MensajesController;
+use App\Http\Controllers\LanguageController;
 
 
 /*
@@ -31,5 +32,6 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 Route::resource('inicio', InicioController::class);
 Route::resource('mensajes', MensajesController::class);
+Route::get('lang/{lang}', [LanguageController::class, 'swap'])->name('lang.swap');
 
 Route::get('/home', [App\Http\Controllers\InicioController::class, 'index'])->name('home');

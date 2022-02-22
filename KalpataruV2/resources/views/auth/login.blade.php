@@ -14,7 +14,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder=" Correo">
@@ -28,7 +28,7 @@
                         </div>
 
                         <div class="form-group row">
-                           
+
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder=" Contraseña">
@@ -47,7 +47,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Recuerdame') }}
+                                    {!! trans('traduccion.Recuerdame') !!}
                                     </label>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                
+
                             </div>
                         </div>
                     </form>
