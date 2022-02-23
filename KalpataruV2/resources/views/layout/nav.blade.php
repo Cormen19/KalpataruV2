@@ -32,7 +32,7 @@
         <li class="nav-item">
           <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('mensajes.index')}}">Mensajes</a>
         </li>
-        @if(Auth::user()->role_id=="2")
+        @if(Auth::user()->role_id=="1")
         <li class="nav-item">
 
           <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('voyager.dashboard')}}">Administrador</a>
