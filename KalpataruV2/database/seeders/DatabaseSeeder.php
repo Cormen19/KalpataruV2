@@ -15,22 +15,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Grado::factory()->create([
-            'nombre'=>'Desarrollo Aplicaciones Web',
-            'abreviacion'=>'DAW',
-        ]);
+
 
         \App\Models\Curso::factory()->create([
-            'numero'=>'2',
-            
+            'nombre'=>'DAW1',
+
+        ]);
+        \App\Models\Curso::factory()->create([
+            'nombre'=>'DAW2',
+
         ]);
         \App\Models\Clase::factory()->create([
             'curso_id'=>'1',
-            'grado_id'=>'1',
+
         ]);
         \App\Models\MensajeEstado::factory()->create([
             'nombre'=>'Activo',
-            
+
         ]);
         \App\Models\Role::factory()->create([
             'name'=>'usuario',
@@ -42,7 +43,7 @@ class DatabaseSeeder extends Seeder
         ]);
         \App\Models\UsuarioEstado::factory()->create([
             'nombre'=>'Activo',
-            
+
         ]);
         \App\Models\User::factory()->create([
             'role_id'=>'2',
@@ -50,8 +51,9 @@ class DatabaseSeeder extends Seeder
             'email'=>'ekacormen@gmail.com',
             'email_verified_at'=>now(),
             'password'=>Hash::make('zzzzzzzz'),
+            'curso_id'=>'1',
             'remember_token' => Str::random(10),
-            
+
         ]);
         \App\Models\User::factory()->create([
             'role_id'=>'1',
@@ -59,17 +61,18 @@ class DatabaseSeeder extends Seeder
             'email'=>'cormen@gmail.com',
             'email_verified_at'=>now(),
             'password'=>Hash::make('zzzzzzzz'),
+            'curso_id'=>'1',
             'remember_token' => Str::random(10),
-            
+
         ]);
         \App\Models\Mensaje::factory()->create([
             'titulo'=>'Mensaje1',
             'texto'=>'Este es el primer mensaje',
-            
+
             'usuario_id'=>'1',
             'clase_id'=>'1',
             'estado_id'=>'1',
-            
+
         ]);
 
     }

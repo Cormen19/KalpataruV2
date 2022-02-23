@@ -7,6 +7,8 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\MensajesController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\CursosController;
+
 
 
 /*

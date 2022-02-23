@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     use HasFactory;
+    protected $fillable=['cursos'];
+    public $timestamps=false;
 
+    public function cursos(){
+        return $this->hasMany(Curso::class,'id');
+    }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\Grado;
+use App\Models\Curso;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -24,6 +25,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+
 
     /**
      * Where to redirect users after registration.
@@ -54,6 +56,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            // 'curso_id'=>['required'],
         ]);
     }
 
@@ -65,20 +68,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
 
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
-        
+        $usuario= new User();
+        $usuario->name=$data['name'];
+        $usuario->email=$data['email'];
+        $usuario->password=Hash::make($data['password']);
+        $usuario->role_id=1;
+        $usuario->curso_id=$data['cursos_id'];
+        $usuario->save();
+        return $usuario;
+        //User::create([
+        //     'name' => $data['name'],
+        //     'email' => $data['email'],
+        //     'password' => Hash::make($data['password']),
+        //     'curso_id' => $data['cursos_id'],
+        // ]);
+
     }
-    public function store(){
-        $user=User::create(request(['name','email','password']));
-        auth()->login($user);
-        return redirect()->to('/');
-        
-    }
-    
+
+
+
 }
