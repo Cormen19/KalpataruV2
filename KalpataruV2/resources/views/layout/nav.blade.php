@@ -1,7 +1,7 @@
 @section('estilos')
 <link rel="stylesheet" href="{{URL::asset('css/nav.css') }}">
 @endsection
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" style="width:118%">
   <div class="container-fluid">
 
   <a style="margin-left:2%; color:white; font-family:Poppins; font-weight:bold;" class="navbar-brand" href="#">KALPATARU</a>
@@ -9,7 +9,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul style="margin-left:55%;" class="navbar-nav mr-auto">
+      <ul  class="navbar-nav mr-auto">
         <li class="nav-item active">
             <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('inicio.index')}}">{!! trans('traduccion.Inicio') !!}</a>
         </li>
@@ -23,19 +23,19 @@
       </li>
       @else
         <li class="nav-item">
-          <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link active" aria-current="page" href="" onclick="event.preventDefault(); document.getElementById('logout').submit();">Cerrar sesion</a>
+          <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link active" aria-current="page" href="" onclick="event.preventDefault(); document.getElementById('logout').submit();">{!! trans('traduccion.Cerrar sesion') !!}</a>
           <!-- Solo usuarios identificados -->
           <form id="logout" action="{{route('logout')}}" method="POST" style="display:none;">
           @csrf
           </form>
         </li>
         <li class="nav-item">
-          <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('mensajes.index')}}">Mensajes</a>
+          <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('mensajes.index')}}">{!! trans('traduccion.Mensajes') !!}</a>
         </li>
         @if(Auth::user()->role_id=="1")
         <li class="nav-item">
 
-          <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('voyager.dashboard')}}">Administrador</a>
+          <a style="color:white; font-family:Poppins; font-weight:bold" onmouseover='this.style.color="red"' onmouseout='this.style.color="white"' class="nav-link" href="{{route('voyager.dashboard')}}">{!! trans('traduccion.Administrador') !!}</a>
           </li>
           @endif
 

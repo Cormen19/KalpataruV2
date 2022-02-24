@@ -81,7 +81,7 @@ $cursos=App\Models\Curso::all();
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrarse') }}
+                                {!! trans('traduccion.Registrarse') !!}
                                 </button>
                             </div>
                         </div>

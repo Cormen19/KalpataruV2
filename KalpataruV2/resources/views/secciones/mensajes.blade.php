@@ -15,7 +15,7 @@
 @endsection
 
 
-<p class="titulo">Mensajes</p>
+<p class="titulo">{!! trans('traduccion.Mensajes') !!}</p>
 <div class="botonAñadir">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
     <i class="fa-solid fa-plus"></i>
@@ -46,26 +46,26 @@
     <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nuevo Mensaje</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{!! trans('traduccion.Nuevo mensaje') !!}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 
           <div class="col-md-6">
-            <label for="nombre" class="form-label">Titulo mensaje</label>
-            <input type="text" class="form-control" id="nombre" name="titulo" placeholder="Titulo mensaje">
+            <label for="nombre" class="form-label">{!! trans('traduccion.Titulo') !!}</label>
+            <input type="text" class="form-control" id="nombre" name="titulo">
           </div>
           <div class="mb-3">
-            <label for="imagen" class="form-label">Mensaje</label>
-            <input class="form-control" type="text" id="imagen" name="texto" placeholder="Texto mensaje">
+            <label for="imagen" class="form-label">{!! trans('traduccion.Mensaje') !!}</label>
+            <input class="form-control" type="text" id="imagen" name="texto">
           </div>
 
 
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Crear</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{!! trans('traduccion.Cancelar') !!}</button>
+        <button type="submit" class="btn btn-primary">{!! trans('traduccion.Crear') !!}</button>
       </div>
 
     </div>

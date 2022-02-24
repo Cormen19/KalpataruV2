@@ -1,6 +1,15 @@
 <?php
 
 return [
+    'Cancelar'=>'Cancelar',
+    'Crear'=>'Crear',
+    'Mensaje'=>'Mensaje',
+    'Titulo'=>'Titulo',
+    'Nuevo mensaje'=>'Nuevo mensaje',
+    'Administrador'=>'Administrador',
+    'Mensajes'=>'Mensajes',
+    'Cerrar sesion'=>'Cerrar sesion',
+    'Login'=>'Entrar',
     'Recuerdame'=>'Recuerdame',
     'Inicio'=>'Inicio',
     'Nosotras' => 'Nosotras',

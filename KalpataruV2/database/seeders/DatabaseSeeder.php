@@ -40,14 +40,25 @@ class DatabaseSeeder extends Seeder
         ]);
         \App\Models\User::factory()->create([
             'role_id'=>'2',
-            'name'=>'Ekaitz',
-            'email'=>'ekacormen@gmail.com',
+            'name'=>'usuario',
+            'email'=>'usuario@user.com',
             'email_verified_at'=>now(),
-            'password'=>Hash::make('zzzzzzzz'),
+            'password'=>Hash::make('usuario'),
             'curso_id'=>'1',
             'remember_token' => Str::random(10),
 
         ]);
+        \App\Models\User::factory()->create([
+            'role_id'=>'1',
+            'name'=>'admin',
+            'email'=>'admin@admin.com',
+            'email_verified_at'=>now(),
+            'password'=>Hash::make('admin'),
+            'curso_id'=>'1',
+            'remember_token' => Str::random(10),
+
+        ]);
+
 
         \App\Models\Mensaje::factory()->create([
             'titulo'=>'Mensaje1',

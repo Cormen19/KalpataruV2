@@ -1,6 +1,15 @@
 <?php
 
 return [
+    'Cancelar'=>'Deseztatu',
+    'Crear'=>'Sortu',
+    'Mensaje'=>'Mezua',
+    'Titulo'=>'Izenburua',
+    'Nuevo mensaje'=>'Mezu berria',
+    'Administrador'=>'Administratzailea',
+    'Mensajes'=>'Mezuak',
+    'Cerrar sesion'=>'Itsi saioa',
+    'Login'=>'Sartu',
     'Recuerdame'=>'Gogoratu',
     'Inicio'=>'Hasiera',
     'Nosotras' => 'Gu',

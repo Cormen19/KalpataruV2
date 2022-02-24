@@ -36,6 +36,20 @@ input#contrasenya.form-control {
   margin-top: 10%;
 }
 
+select#cursos_id.form-control {
+  width: 65%;
+  margin-left: 16%;
+  margin-top: 2%;
+}
+
+label {
+  margin-left: 15%;
+  margin-top: 2%;
+  color: white;
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
 .registerTitulo {
   font-family: 'Poppins';
   font-weight: bold;
@@ -46,7 +60,7 @@ input#contrasenya.form-control {
 }
 
 div.card {
-  height: 380px;
+  height: 464px;
   background-color: #2A4E6C;
 }
 
@@ -57,7 +71,7 @@ body {
 button.btn.btn-primary {
   font-family: 'Poppins';
   font-weight: bold;
-  margin-top: 20%;
+  margin-top: -53%;
   margin-left: -5%;
 }
 /*# sourceMappingURL=register.css.map */
