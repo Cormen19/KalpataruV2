@@ -1,9 +1,15 @@
 <?php
 
 return [
+    'Grafico'=>'Grafikoa',
+    'Perfil'=>'Profila',
+    'Texto'=>'Testua',
+    'Mensajes'=>'Mesuak',
+    'Email'=>'Posta elektronikoa',
+    'Nombre'=>'Izena',
     'Cancelar'=>'Deseztatu',
     'Crear'=>'Sortu',
-    'Mensaje'=>'Mezua',
+    'Mensaje'=>'Mesua',
     'Titulo'=>'Izenburua',
     'Nuevo mensaje'=>'Mezu berria',
     'Administrador'=>'Administratzailea',

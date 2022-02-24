@@ -1,0 +1,77 @@
+$colorFondoCartaPerfil:#2A4E6C;
+$colorFondoBody:#001D3F;
+$colorLetras:white;
+div#mensajes{
+    
+    margin-left: 20%;
+    margin-top: -3%;
+}
+div.card-body{
+    height: 254px;
+    margin-top:4%
+}
+div.card.mb-3{
+    margin-top: 5%;
+    background-color: $colorFondoCartaPerfil;
+    height: 265px;
+    
+}
+div.col-md-4.mb-3{
+    margin-top: 3%;
+    background-color:$colorFondoCartaPerfil;
+}
+.tituloMensaje{
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+body{
+    background-color: $colorFondoBody;
+}
+div.card{
+    background-color: $colorFondoCartaPerfil;
+    border: none !important;
+}
+.nombreUsuarioGrande{
+    color: $colorLetras;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+#nombreUsuario{
+    color: $colorLetras;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+#emailUsuario{
+    color: $colorLetras;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+#mensajesUsuario{
+    color: $colorLetras;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+#tituloMensaje{
+    color: $colorLetras;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+#contenidoMensaje{
+    color: $colorLetras;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+ul.listaMensajes{
+    float: left;
+}
+@media(max-width:414px){
+    div.card.mb-3{
+        height: 306px;
+    }
+    div.col-md-4.mb-3{
+        width: 94%;
+        margin-left: 3%;
+        margin-top: 21%;
+    }
+}

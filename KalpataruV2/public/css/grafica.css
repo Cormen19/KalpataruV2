@@ -1,0 +1,18 @@
+.grafico {
+  width: 520px !important;
+  height: 80px !important;
+  margin-left: 27%;
+}
+
+body {
+  background-color: #001D3F;
+}
+
+@media (max-width: 414px) {
+  .grafico {
+    margin-left: 2%;
+    width: 400px !important;
+    margin-top: 45%;
+  }
+}
+/*# sourceMappingURL=grafica.css.map */

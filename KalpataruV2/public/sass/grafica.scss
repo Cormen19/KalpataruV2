@@ -1,0 +1,16 @@
+$colorFondoBody:#001D3F;
+.grafico{
+    width: 520px !important;
+    height: 80px !important;
+    margin-left: 27%;
+}
+body{
+    background-color: $colorFondoBody;
+}
+@media(max-width:414px){
+    .grafico{
+        margin-left: 2%;
+        width: 400px !important;
+        margin-top: 45%;
+    }
+}

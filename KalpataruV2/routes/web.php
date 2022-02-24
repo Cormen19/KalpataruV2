@@ -8,6 +8,8 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\MensajesController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\CursosController;
+use App\Http\Controllers\GraficoController;
+use App\Http\Controllers\PerfilController;
 
 
 
@@ -35,5 +37,8 @@ Auth::routes();
 Route::resource('inicio', InicioController::class);
 Route::resource('mensajes', MensajesController::class);
 Route::get('lang/{lang}', [LanguageController::class, 'swap'])->name('lang.swap');
+Route::resource('grafico', GraficoController::class);
+Route::get('/grafica',function(){return view('secciones.grafica');})->name('grafica');
+Route::resource('perfil', PerfilController::class);
 
 Route::get('/home', [App\Http\Controllers\InicioController::class, 'index'])->name('home');

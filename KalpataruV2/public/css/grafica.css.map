@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,QAAQ,CAAA;EACJ,KAAK,EAAE,gBAAgB;EACvB,MAAM,EAAE,eAAe;EACvB,WAAW,EAAE,GAAG;CACnB;;AACD,AAAA,IAAI,CAAA;EACA,gBAAgB,EAPJ,OAAO;CAQtB;;AACD,MAAM,EAAC,SAAS,EAAE,KAAK;EACnB,AAAA,QAAQ,CAAA;IACJ,WAAW,EAAE,EAAE;IACf,KAAK,EAAE,gBAAgB;IACvB,UAAU,EAAE,GAAG;GAClB",
+    "sources": [
+        "../sass/grafica.scss"
+    ],
+    "names": [],
+    "file": "grafica.css"
+}

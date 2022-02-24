@@ -1,4 +1,11 @@
 img {
   width: 118%;
 }
+
+@media (max-width: 414px) {
+  img {
+    width: 100%;
+    height: 840px;
+  }
+}
 /*# sourceMappingURL=inicio.css.map */

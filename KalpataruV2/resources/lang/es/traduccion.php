@@ -1,6 +1,12 @@
 <?php
 
 return [
+    'Grafico'=>'Grafico',
+    'Perfil'=>'Perfil',
+    'Texto'=>'Texto',
+    'Mensajes'=>'Mensajes',
+    'Email'=>'Email',
+    'Nombre'=>'Nombre',
     'Cancelar'=>'Cancelar',
     'Crear'=>'Crear',
     'Mensaje'=>'Mensaje',

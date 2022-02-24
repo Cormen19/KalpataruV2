@@ -54,3 +54,29 @@ div.card{
 body{
     background-color: $colorFondoBody;
 }
+@media(max-width:414px){
+    div.card{
+        width: 161%;
+        margin-left:-42px;
+    }
+    input#email.form-control{
+        width:91%;
+        margin-left: 4%;
+    }
+    input#password.form-control{
+        width: 91%;
+        margin-left: 4%;
+    }
+    label.form-check-label{
+        margin-left: 5%;
+    }
+    input#remember.form-check-input{
+        margin-left: 2.5em;
+    }
+    button.btn.btn-primary{
+        margin-left: 36%;
+    }
+    div.card{
+        margin-top: 96%;
+    }
+}
